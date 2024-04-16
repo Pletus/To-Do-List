@@ -6,3 +6,11 @@
     --nav: #85586F;
     --footer: #643843;
 }
+
+.navbar {
+    background-color: var(--nav);
+}
+
+.hero {
+    background-color: var(--hero);
+}
