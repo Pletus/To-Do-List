@@ -14,3 +14,11 @@
 .hero {
     background-color: var(--hero);
 }
+
+.todosection {
+    background-color: var(--containersbg);
+}
+
+.footer {
+    background-color: var(--footer);
+}
