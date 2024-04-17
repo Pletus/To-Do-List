@@ -23,7 +23,10 @@ button1.addEventListener("click", (mylist) => {
     console.log(todos);
 
     localStorage.setItem("todolist", JSON.stringify(todos));
+
   }
 
   element.value = "";
+
+ 
 });
