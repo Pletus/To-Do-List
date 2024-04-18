@@ -5,33 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>To Do List</title>
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- <script src="./index.js"></script> -->
 </head>
-<body>
-    <header>
-        <nav>
 
+<body class="">
+
+    <header class="sticky-top row d-flex navbar">
+        <nav class="p-2 col logo d-flex justify-content-center"><img class="img-fluid" style="height: 150px;width: 150px;" src="./Assets/Imgs/notes-logo-transparent.png" alt="logo"></div>
+        
         </nav>
     </header>
-    <main>
-        <section class="ToDoListSection">
 
-            <div class="AddNewAndToDoList">
-                <div class="AddNew"></div>
-                <div class="ToDoList"></div>
+    <main class="">
+
+        <section class="">
+
+            <div class="hero vh-100 d-flex align-items-center justify-content-center"> <!-- HERO SECTION --> 
+                <h1 class="p-5 text-center display-1"><em>Making notes taste better</em></h1>
             </div>
 
-            <!-- CAREFULL -->
+            <div class="container pt-5 pb-5 todosection"> <!-- TO DO SECTION -->
+                <div class="row">
+                    <div class="col" class="AddNewAndDone"> <!-- ADD NEW Item and DONE SECTION -->
+                    
+                        <div class="row" class="AddNew"> <!-- TO DO Denis section -->   
+                            <div class="col"> 
+                                <div class="row">Add new task</div>
+                            
+                                <div class="row">
+                                    <!-- <form action=""> -->
+                                        <fieldset>
+                                            <label for="">Task title</label>
+                                            <br>
+                                            <!-- <textarea name="" id="textboxid" cols="30" rows="10" placeholder="Description of the task.."></textarea> -->
+                                            <input type="text" class="text-boxclass" id="textboxid" placeholder="Add Task">
+                                            <br>
+                                            <button id="submitbuttonid">Add task</button>
+                                        </fieldset>
+                                    <!-- </form> -->
+                                </div>
+                                <div class="row"></div>
+                            </div>
+                        </div>
 
-            <div class="DoneList">
+                        <div class="row card mt-2"> <!-- TO DO  Yago Section-->   
+                            <h3 class="text-center border">Done</h3>
+                            <div class="p-2 d-flex justify-content-around">
+                                <ul id="donelist1">
+                                    <li class="">task 1</li>
+                                    <li class="">task 2</li>
+                                    <li class="">task 3</li>
+                                    <li class="">task 4</li>
+                                    <li class="">task 5</li>
+                                    <li class="">task 6</li>
+                                </ul>
+                                <ul id="donelist2">
+                                    <li class="">task 7</li>
+                                    <li class="">task 8</li>
+                                    <li class="">task 9</li>
+                                    <li class="">task 10</li>
+                                    <li class="">task 11</li>
+                                    <li class="">task 12</li>
+                                </ul>
+                            </div>
+                            <div class="p-2 d-flex justify-content-around">
+                                <button id="sendBackBtn" class="btn btn-secondary">Send back</button>
+                                <button id="deleteDoneBtn" class="btn btn-secondary">Delete</button>
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                    <div class="col list-group mb-2 border border-2 p-10 mx-10 bg-light " class="ToDoList"><!-- Anita section -->
+                         <div class="ToDoList container bg-light">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h1 id="headertitlecs" class="headertitleid justify-content-center">To Do List</h1>
+                                        </div>
+                                    </div>
+                                
+                                
+                                   <div class="row" .bg-success-subtle>
+                                      <div class="col-md-12">
+                                    
+				    						<ul class="list-group p-6 list-group-flush "  id="orderlistid"> 
+                                            
+				    							<!-- <li class="list-group-item">
+				    								<input class="form-check-input me-1" type="checkbox" value="" >A First item
+				    								<button>Edit</button>
+				    								<button>Delete</button>
+				    							</li>
+				    							<li class="list-group-item">
+				    								<input class="form-check-input me-1" type="checkbox" value="" >A second item
+				    								<button>Edit</button>
+				    								<button>Delete</button>
+				    							</li>
+				    							<li class="list-group-item">
+                                    				<input class="form-check-input me-1" type="checkbox" value="" >A third item
+				    								<button>Edit</button>
+				    								<button>Delete</button>
+				    							</li>
+				    							<li class="list-group-item">
+				    								<input class="form-check-input me-1" type="checkbox" value="" >A fourth item
+				    								<button>Edit</button>
+				    								<button>Delete</button>
+				    							</li>
+				    							<li class="list-group-item">
+				    								<input class="form-check-input me-1" type="checkbox" value="" >And a fifth one
+				    								
+				    								<button>Delete</button> -->
 
+                                                    
+				    							</li>
+				    					 </ul>
+                                        
+				    		         </div>
+				                 </div>
+                       </div>  
+                    </div>
+                </div>
+                
             </div>
 
         </section>
     </main>    
-    <footer>
-        
+
+    <footer class="footer vh-100 d-flex justify-content-around align-items-center">
+        <img class="" src="./Assets/Imgs/notes-logo-white-transparent.png" style="height: 250px;width: 250px;" alt="">
+        <div>
+            <h5 class="text-light">Company</h5>
+            <br>
+            <p class="text-light">Founded in Bohn</p>
+            <p class="text-light">EinsteinStraße 12</p>
+            <p class="text-light">12045, Bohn, Deutschland</p>
+        </div>
+        <div>
+            <h5 class="text-light">Download</h5>
+            <br>
+            <p class="text-light">Download our App for windows</p>
+            <p class="text-light">Download our App for IOs</p>
+            <p class="text-light">Check latest updates</p>
+        </div>
+        <div class="mb-5 pb-5">
+            <h5 class="text-light">Contact</h5>
+            <img src="./Assets/Icons/icon-facebook.svg" alt="">
+            <img src="./Assets/Icons/icon-instagram.svg" alt="">
+            <img src="./Assets/Icons/icon-snapchat-logo.svg" alt="">
+            <img src="./Assets/Icons/icon-tiktok.svg" alt="">
+            <img src="./Assets/Icons/icon-youtube.svg" alt="">
+        </div>
     </footer>
+    <script   src="index.js"></script>
 </body>
 </html>
 
