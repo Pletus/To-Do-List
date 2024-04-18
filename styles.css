@@ -7,18 +7,18 @@
     --footer: #643843;
 }
 
-.navbar {
+.navbar-color {
     background-color: var(--nav);
 }
 
-.hero {
+.hero-color {
     background-color: var(--hero);
 }
 
-.todosection {
+.todosection-color {
     background-color: var(--containersbg);
 }
 
-.footer {
+.footer-color {
     background-color: var(--footer);
 }
