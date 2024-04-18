@@ -22,3 +22,7 @@
 .footer-color {
     background-color: var(--footer);
 }
+
+.auto {
+    height: 8rem;
+}

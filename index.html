@@ -17,20 +17,19 @@
     </header>
 
     <main class="">
-            <section class="row hero-color vh-100 d-flex align-items-center justify-content-center"> <!-- HERO SECTION --> 
+            <section class="proper-height row hero-color d-flex align-items-center justify-content-center"> <!-- HERO SECTION --> 
                 <h1 class="p-5 text-center display-1"><em>Making notes taste better</em></h1>
             </section>
 
-            <section class=" pt-5 pb-5 todosection-color row"> <!-- TO DO SECTION -->
-                    <div class="col p-5" class="AddNewAndDone"> <!-- ADD NEW Item and DONE SECTION -->           
-                        <div class="hero-color col card"> 
+            <section class=" p-5 todosection-color row"> <!-- TO DO SECTION -->
+                        <div class="hero-color col card auto"> 
                             <h3 class="navbar-color headertitleid text-center border text-light">Add new task</h3>
                         
-                            <div class="hero-color row">
+                            <div class="hero-color row d-flex">
                                 <!-- <form action="">
                                     <fieldset> -->
                                         <br>
-                                        <textarea class="hero-color" name="" id="descripText" cols="102" rows="10" placeholder="Description of the task.."></textarea>
+                                        <input class="col-10 hero-color ml-4 p-4" name="" id="descripText" cols="100" rows="10" placeholder="Description of the task..">
                                         <br>
                                         <button class="btn-light" id="addTaskBtn">Add task</button>
                                     <!-- </fieldset>
@@ -38,25 +37,17 @@
                             </div>
                             <div class="row"></div>
                         </div>
-                    </div>
-                    <div class="col card m-5 hero-color" class="ToDoList"><!-- Anita section -->
-                         <div class="hero-color ToDoList container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                <h3 id="headertitlecs" class="navbar-color text-light headertitleid text-center border">To Do List</h3>
-                            </div>
-                                <div class="col-md-12">
-				    				<ul id="bigList"> 		
-				    			    </ul>
-                                    <div class="d-flex justify-content-center align-self-end">
-                                    </div>
-				    		    </div>
+                        <div class="col card hero-color" class="ToDoList"><!-- Anita section -->
+                            <div class="hero-color ToDoList container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    <h3 id="headertitlecs" class="navbar-color text-light headertitleid text-center border">To Do List</h3>
+				    				<ul class="" id="bigList"></ul>  
                         </div>
-                    </div>
             </section>
     </main>    
 
-    <footer class="footer-color vh-100 d-flex justify-content-around align-items-center row">
+    <footer class="footer-color p-2 d-flex justify-content-around align-items-center row">
         <img class="" src="./Assets/Imgs/notes-logo-white-transparent.png" style="height: 250px;width: 250px;" alt="">
         <div>
             <h5 class="text-light">Company</h5>

@@ -26,6 +26,9 @@ function addPlease(todoDescription) {
     const uniqueId = Date.now();
     newListItem.id = uniqueId;
 
+    const actionButtons = document.createElement('div');
+    actionButtons.classList.add('d-inline-flex','align-self-end');
+
     const span = document.createElement('span');
     span.textContent= todoDescription;
     newListItem.appendChild(span)
@@ -47,8 +50,9 @@ function addPlease(todoDescription) {
             newListItem.remove();
         });
 
-    newListItem.appendChild(deleteBtn);
-
+    actionButtons.appendChild(addEditBtn);
+    actionButtons.appendChild(deleteBtn);
+    newListItem.appendChild(actionButtons);
     bigList.appendChild(newListItem);
 
     newListItem.classList.add('list-group-item', 'hero-color')
