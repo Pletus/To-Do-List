@@ -17,27 +17,26 @@ if (descripText.value !== '') {
     const newTask = {id:Date.now(), task: descripText.value, completed: false };
     todoList.push(newTask);
     localStorage.setItem('bigList', JSON.stringify(todoList));
-    addPlease(newTask.task);
+    addPlease(newTask);
 }});
 
-function addPlease(todoDescription) {
-
+function addPlease(task) {
+    console.log(task)
     const newListItem = document.createElement('li');
-    const uniqueId = Date.now();
-    newListItem.id = uniqueId;
+    newListItem.id = task.id;
 
     const actionButtons = document.createElement('div');
     actionButtons.classList.add('d-inline-flex','align-self-end');
 
     const span = document.createElement('span');
-    span.textContent= todoDescription;
+    span.textContent= task.task;
     newListItem.appendChild(span)
 
     const addEditBtn = document.createElement('button');
     addEditBtn.textContent = 'Edit';
     newListItem.appendChild(addEditBtn);
         addEditBtn.addEventListener('click', function() {
-            const updatedText = prompt('Edit task:', todoDescription);
+            const updatedText = prompt('Edit task:', task.task);
             if (updatedText !== null) {
             span.textContent = updatedText;
             updateTodoList(newListItem.id, updatedText);
@@ -45,7 +44,10 @@ function addPlease(todoDescription) {
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
-        deleteBtn.addEventListener('click', function() {
+        deleteBtn.addEventListener('click', function(event) {
+            console.log(event.target.parentElement.parentElement);
+            let liItemToDelete = event.target.parentElement.parentElement;
+            console.log(liItemToDelete.id)
             deleteTodoItem(newListItem.id);
             newListItem.remove();
         });
@@ -61,7 +63,13 @@ function addPlease(todoDescription) {
 }
 
 function deleteTodoItem(id) {
-    todoList = todoList.filter(todo => todo.id !== Number(id));
+    todoList = todoList.filter(todo =>  { 
+        let stringId = todo.id.toString();
+        if (stringId !== id) { 
+            return todo
+        }
+        });
+    console.log(todoList);
     localStorage.setItem('bigList', JSON.stringify(todoList));
 }
 
